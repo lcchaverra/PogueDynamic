@@ -1,0 +1,14 @@
+.main-header {
+    overflow: hidden;
+    display: flex;
+    height: $header-height;
+    width: 100%;
+    padding: 0.1rem 2rem;
+    background-color: #b9b9b9;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -5px -5px .7em var(--button-color);
+    z-index: 10;
+    // position: fixed;
+    box-shadow: 0px 15px 1px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,29 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    color: var(--letter-color);
+    background-color: var(--bg-color2);
+    @include rwd(l) {
+        padding: 5rem 8rem;
+    }
+}
+
+.subtitle-about {
+    font-style: italic;
+}
+
+.title-about {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        background-color: var(--letter-color);
+    }
+}

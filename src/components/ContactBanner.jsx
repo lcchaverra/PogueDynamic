@@ -1,4 +1,4 @@
-import BannerImg from '../assets/back.jpg'
+import BannerImg from '../assets/foto5.jpg'
 
 const ContactBanner = () => {
   return (

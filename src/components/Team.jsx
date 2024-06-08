@@ -1,4 +1,4 @@
-import BannerImg from '../assets/back.jpg'
+import BannerImg from '../assets/foto4.jpg'
 
 const Team = () => {
   return (

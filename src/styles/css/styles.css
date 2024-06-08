@@ -1,7 +1,7 @@
 :root {
   --primary: rgba(0,32,102,1);
   --button-color: #191919 ;
-  --letter-color: #000000f5;
+  --letter-color: #222222f5;
   --bg-color:#FFFF;
   --bg-color2: #F6F9FC;
   --rounded-element: #F3F5F9;
@@ -116,7 +116,7 @@ h3 {
   height: 6rem;
   width: 100%;
   padding: 0.1rem 2rem;
-  background-color: #b9b9b9;
+  background-color: #027cc6;
   justify-content: space-between;
   align-items: center;
   box-shadow: -5px -5px 0.7em var(--button-color);
@@ -173,7 +173,7 @@ h3 {
   position: absolute;
   height: auto;
   width: 100%;
-  background-color: #b9b9b9;
+  background-color: #027cc6;
   top: -16.5rem;
   transition: all 0.3s;
   z-index: var(--z-fixed);
@@ -409,6 +409,8 @@ h3 {
 .Banner-title {
   font-size: 2rem;
   font-weight: bold;
+  align-items: center;
+  text-align: center;
 }
 @media screen and (min-width: 960px) {
   .Banner-title {

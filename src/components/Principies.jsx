@@ -1,4 +1,4 @@
-import testImg from "../assets/back.jpg";
+import testImg from "../assets/foto4.jpg";
 
 const Principies = () => {
   return (

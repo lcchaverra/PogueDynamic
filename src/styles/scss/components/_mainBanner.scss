@@ -36,6 +36,8 @@
 .Banner-title {
   font-size: 2rem;
   font-weight: bold;
+  align-items: center;
+  text-align: center;
   @include rwd(l) {
     font-size: 4rem;
   }

@@ -1,11 +1,12 @@
-import testImg from "../assets/back.jpg";
+import misionImg from "../assets/foto2.jpg";
+import visionImg from "../assets/foto5.jpg";
 
 const MisionAndVision = () => {
   return (
     <>
       <section className="mision-container">
         <div className="mision-imagen-container">
-          <img src={testImg} alt="Mision imagen" />
+          <img src={misionImg} alt="Mision imagen" />
         </div>
         <div>
           <h2>Misión</h2>
@@ -14,7 +15,7 @@ const MisionAndVision = () => {
       </section>
       <section className="mision-container">
         <div className="mision-imagen-container vision-imagen-container">
-          <img src={testImg} alt="Mision imagen" />
+          <img src={visionImg} alt="Mision imagen" />
         </div>
         <div>
           <h2>Visión</h2>

@@ -6,10 +6,10 @@ import { FaYoutube } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-        <footer class="footer">
-            <div class="container">
-            <div class="row">
-                <div class="footer-col">
+        <footer className="footer">
+            <div className="container">
+            <div className="row">
+                <div className="footer-col">
                 <h4>company</h4>
                 <ul>
                     <li><a href="#">about us</a></li>
@@ -18,7 +18,7 @@ const Footer = () => {
                     <li><a href="#">affiliate program</a></li>
                 </ul>
                 </div>
-                <div class="footer-col">
+                <div className="footer-col">
                 <h4>get help</h4>
                 <ul>
                     <li><a href="#">FAQ</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                     <li><a href="#">payment options</a></li>
                 </ul>
                 </div>
-                <div class="footer-col">
+                <div className="footer-col">
                 {/* <h4>online shop</h4> */}
                 <ul>
                     <li><a href="#">Medellín</a></li>
@@ -37,9 +37,9 @@ const Footer = () => {
                     <li><a href="#">PBX:  +57 314 606 67 77</a></li>
                 </ul>
                 </div>
-                <div class="footer-col"> 
+                <div className="footer-col"> 
                 <h4>Redes Sociales</h4>
-                <div class="social-links">
+                <div className="social-links">
                     <a href="#" target="_blank"><FaFacebookF /></a>
                     <a href="#" target="_blank"><FaXTwitter /></a>
                     <a href="#" target="_blank"><FaInstagram /></a>

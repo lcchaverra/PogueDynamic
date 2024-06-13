@@ -1,18 +1,72 @@
+import { useRef, useEffect } from "react"
+import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser'
+
 const ContactForm = () => {
+
+  const form = useRef(null)
+
+  useEffect(() => {
+      emailjs.init('user_NbWHHoXNBSbJSJeC7s6uJ')
+  },[])
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (form.current) {
+        emailjs
+            .sendForm('11932238243234854645', 'template_28hzft8', form.current)
+            .then(() => { 
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer;
+                  toast.onmouseleave = Swal.resumeTimer;
+                }
+              });
+              Toast.fire({
+                icon: "success",
+                title: "Se ha enviado el correo correctamente"
+              });
+                form?.current?.reset();
+            },
+            (error) => { 
+              console.log(error)
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer;
+                  toast.onmouseleave = Swal.resumeTimer;
+                }
+              });
+              Toast.fire({
+                icon: "error",
+                title: "No se ha podido enviar el correo"
+              });
+            },
+        );
+    }
+}
+
   return (
     <div className="container-form">
-      <p className="subtitle-form">
-        Ustedes son lo más importante, la batalla que siempre estamos dispuestos
-        a dar
-      </p>
-      <form className="form">
+      <p className="subtitle-form">Nosotros Defendemos tus derechos </p>
+      <form className="form" ref={form} onSubmit={sendEmail}>
         <label className="label">
           <input
             required
             type="text"
             className="input"
             placeholder="Ingresa tu nombre"
-            autocomplete="off"
+            autoComplete="off"
+            name="nombre_usuario"
           />
         </label>
 
@@ -22,7 +76,8 @@ const ContactForm = () => {
             type="email"
             className="input"
             placeholder="Ingresa tu email"
-            autocomplete="off"
+            autoComplete="off"
+            name="email_usuario"
           />
         </label>
         <label className="label">
@@ -31,7 +86,7 @@ const ContactForm = () => {
             type="text"
             className="input"
             placeholder="Ingresa tu Teléfono"
-            autocomplete="off"
+            autoComplete="off"
           />
         </label>
 
@@ -40,7 +95,7 @@ const ContactForm = () => {
             required
             placeholder="Ingresa tu consulta"
             className="input"
-            name=""
+            name="Texto"
             id=""
             cols="60"
             rows="10"
@@ -48,8 +103,8 @@ const ContactForm = () => {
         </label>
 
         <button className="button">
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
+          <div className="svg-wrapper-1">
+            <div className="svg-wrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

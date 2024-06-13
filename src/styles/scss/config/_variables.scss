@@ -16,8 +16,10 @@ $breakpoints: (
     --primary: rgba(0,32,102,1);
     --button-color: #191919 ;
     --letter-color: #222222f5;
+    --letter-color2: #F3F5F9;
     --bg-color:#FFFF;
     --bg-color2: #F6F9FC;
+    --bg-color3: #1D1D1B;
     --rounded-element: #F3F5F9;
     background-color: var(--bg-color);
     // Z-index - Variables de apilamientos
@@ -48,9 +50,11 @@ $breakpoints: (
     $border-color: rgba(0, 0, 0, 0.795);
     :root {
         --letter-color: #FFFF;
-        --bg-color2  : #24262b;
+        // --bg-color2  : #24262b;
+        --bg-color2  : #1D1D1B;
         // --bg-color    : #192229;
-        --bg-color    : rgb(28, 28, 31);
+        // --bg-color    : rgb(28, 28, 31);
+        --bg-color: #181816;
         --rounded-element: #232932;
     } 
     .main-logo img{

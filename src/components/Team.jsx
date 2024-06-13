@@ -9,7 +9,7 @@ const Team = () => {
         <p className='Banner-message'>
             Somos un equipo de Abogados especializados que representan la pasión y el espíritu de entregarlo todo por una causa.
         </p>
-        <button className='btn'>Conocelos Aqui</button>
+        {/* <button className='btn'>Conocelos Aqui</button> */}
     </div>
 </section>
   )

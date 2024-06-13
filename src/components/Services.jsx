@@ -1,6 +1,11 @@
-import { Children, useState } from "react";
+import { useState } from "react";
+import Logo1 from "../assets/Recurso 1.svg" 
+import Logo2 from "../assets/Recurso 2.svg" 
+import Logo3 from "../assets/Recurso 3.svg" 
+import Logo4 from "../assets/Recurso 4.svg" 
+import Logo5 from "../assets/Recurso 5.svg" 
 
-import { AiOutlineBulb, AiOutlineCoffee, AiOutlineCloudServer  } from "react-icons/ai";
+// import { AiOutlineBulb, AiOutlineCoffee, AiOutlineCloudServer  } from "react-icons/ai";
 
 const Modal = ({ isOpen, onClose, title, content, children  }) => {
     if (!isOpen) return null;
@@ -36,23 +41,23 @@ const Services = () => {
         </section>
         <section className="services-icons-container">
             <span className="services-icon" onClick={() => openModalHandler('comercial')}>
-                <AiOutlineBulb className="icon" />
+                <img src={Logo5} className="icon" alt="Icono" />
                 <p>Derecho Comercial</p>
             </span>
             <span className="services-icon" onClick={() => openModalHandler('penal')}>
-                <AiOutlineCoffee className="icon" />
+                <img src={Logo2} className="icon" alt="Icono" />
                 <p>Derecho Penal</p>
             </span>
             <span className="services-icon" onClick={() => openModalHandler('privado')}>
-                <AiOutlineCloudServer className="icon" />
+                <img src={Logo3} className="icon" alt="Icono" />
                 <p>Derecho Privado</p>
             </span>
             <span className="services-icon" onClick={() => openModalHandler('publico')}>
-                <AiOutlineBulb className="icon" />
+                <img src={Logo4} className="icon" alt="Icono" />
                 <p>Derecho Publico</p>
             </span>
             <span className="services-icon" onClick={() => openModalHandler('constitucional')}>
-                <AiOutlineCoffee className="icon" />
+                <img src={Logo1} className="icon" alt="Icono" />
                 <p>Derecho Constitucional</p>
             </span>
         </section>

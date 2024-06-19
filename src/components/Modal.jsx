@@ -47,48 +47,42 @@ const ModalLink = ({ show, handleClose, linkActual, title, children  }) => {
       //   </div>
       // </div> 
       <>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Link Banners</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+      <Modal.Header closeButton>
+        <Modal.Title>{title}</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {children}
         <input
-            type="text"
-            onChange={change}
-            width="90%"
-            autoFocus
-            placeholder="Link Banners"
-            name="link"
-            className="input-guia"
-            value={modalLink.link}
-          />
-        </Modal.Body>
-        <Modal.Footer>
-       
-
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="dark" onClick={env}>
-            {loading ? (
-              <Spinner
-                as="span"
-                animation="border"
-                size="sm"
-                role="status"
-                aria-hidden="true"
-              />
-            ) : (
-              "Aplicar"
-            )}
-          </Button>
-        </Modal.Footer>
-      </Modal>
+          type="text"
+          onChange={change}
+          width="90%"
+          autoFocus
+          placeholder="Link Banners"
+          name="link"
+          className="input-guia"
+          value={modalLink.link || ''}
+        />
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+          Close
+        </Button>
+        <Button variant="dark" onClick={env}>
+          {loading ? (
+            <Spinner
+              as="span"
+              animation="border"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+          ) : (
+            "Aplicar"
+          )}
+        </Button>
+      </Modal.Footer>
+    </Modal>
     </>
   );
 }

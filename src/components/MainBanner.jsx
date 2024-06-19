@@ -34,7 +34,7 @@ const MainBanner = () => {
         setImageBanner(`${import.meta.VITE_APP_API}/banners/${array[0].img}`);
       }
     } catch (error) {
-      alert("Error, revise conexion");
+      console.error("Error, revise conexion");
       setImageBanner(BannerImg);
     }
   };

@@ -4,6 +4,7 @@ import App from './Pages/App.jsx'
 import Error404 from './Pages/Error404.jsx'
 import Contact from './Pages/Contact.jsx'
 import About from './Pages/About.jsx'
+import Login from './Pages/Login.jsx'
 import './styles/css/styles.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
   {
     path: '*',

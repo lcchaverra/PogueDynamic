@@ -430,6 +430,33 @@ h3 {
   }
 }
 
+.editButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  z-index: 15;
+  filter: invert(100%);
+  background-color: var(--letter-color2);
+  animation: moving 3s infinite;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .Banner-second {
   position: relative;
   display: flex;
